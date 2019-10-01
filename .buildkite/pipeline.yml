@@ -1,3 +1,14 @@
 steps:
+  - block: ":rocket: Build!"
   - label: ':hammer: Build'
     command: 'powershell.exe -File .buildkite/scripts/build.ps1'
+  - command: 'exit -1'
+  - wait: ~
+    continue_on_failure: true
+  - label:  ':hammer: Run Unit and Integration Tests'
+    command: 'echo SECOND command'
+    command: 'echo THIRD command'
+  - label:  ':hammer: Run Website Tests'
+    command: 'echo FOURTH command'
+    command: 'echo FIFTH command'
+    
