@@ -11,4 +11,13 @@ steps:
   - label:  ':hammer: Run Website Tests'
     command: 'echo FOURTH command'
     command: 'echo FIFTH command'
+
+  - wait
+  - block: ":rocket: Deploy to Test!"
+  - label: Block across all projects
+    command: 'echo to test Done command'
     
+  - wait
+  - block: ":rocket: Start production release"
+  - label: Start prod release
+    command: 'echo End prod release'
