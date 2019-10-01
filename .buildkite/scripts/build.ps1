@@ -1,3 +1,3 @@
 Write-Output "--- Execute in build.ps1";
 
-Write-Output "-Build Success";
+throw "Build Failed. see log err for details";
