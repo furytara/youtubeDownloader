@@ -1,8 +1,8 @@
 Write-Output "Build value $env:BUILDKITE_OUTPUT"
 
-IF  ($env:BUILDKITE_OUTPUT -eq 0) {
-	Write-Output "--- Build Failure.";
+IF  (${Env:BUILDKITE_OUTPUT} -eq 1) {
+	Write-Output "-Build Failure.";
 	throw "Build Fail. Error occured";
 }
 
-Write-Output "--- Build Success";
+Write-Output "-Build Success";
